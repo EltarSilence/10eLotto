@@ -1,0 +1,8 @@
+Creare un sistema in linguaggio CoffeeScript (JS) e HTML che simuli un'estrazione del 10eLotto.
+
+Il sistema estrae 20 numeri casuali diversi tra loro.
+L'utente scommette su cinque numeri.
+
+Il sistema restituisce una vincita in base alla quantita' di numeri indovinati.
+
+Nella pagina HTML dovranno essere mostrati i numeri estratti ed i numeri giocati, ed i numeri vinti in un qualche modo evidenziati rispetto agli altri.
