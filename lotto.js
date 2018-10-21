@@ -41,21 +41,21 @@
         if (bet !== 1) {
           winAmount = bet * 1.5;
         } else {
-          winAmount = 15;
+          winAmount = 2;
         }
         break;
       case 4:
         if (bet !== 1) {
           winAmount = bet * 3.5;
         } else {
-          winAmount = 25;
+          winAmount = 5;
         }
         break;
       case 5:
         if (bet !== 1) {
           winAmount = Math.pow(bet, 5);
         } else {
-          winAmount = 50;
+          winAmount = 20;
         }
         break;
       default:

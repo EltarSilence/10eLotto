@@ -32,7 +32,7 @@ calcolaVincita = (bet, n_ind) ->
 			else winAmount = 5
 		when 5
 			if bet isnt 1
-				winAmount = bet**5 
+				winAmount = bet**5
 			else winAmount = 20
 
 		else winAmount = 0
