@@ -1,10 +1,13 @@
 isValid = (str) ->
-  debugger
+  k = 0
   if str.length >= 13 and str.length <= 18
     for element in str.split(', ')
+      k++
       if isNaN(element)
         return no
-  yes
+    if k is 5
+        return yes
+  no
 
 soldi = prompt("Inserisci quanto vuoi scommettere", "1")
 
