@@ -1,6 +1,16 @@
+isValid = (str) ->
+  debugger
+  if str.length >= 13 and str.length <= 18
+    for element in str.split(', ')
+      if isNaN(element)
+        return no
+  yes
+
 soldi = prompt("Inserisci quanto vuoi scommettere", "1")
 
-userBet = prompt("Numeri scommessi:", "16, 33, 44, 60, 76")
+loop
+  userBet = prompt("Inserisci cinque numeri su cui scommettere. Separali con virgola e spazio:", "16, 33, 44, 60, 76")
+  break if isValid(userBet)
 
 contains = (a, obj) ->
   i = a.length
