@@ -25,15 +25,16 @@ calcolaVincita = (bet, n_ind) ->
 		when 3
 			if bet isnt 1
 				winAmount = bet*1.5
-			else winAmount = 15
+			else winAmount = 2
 		when 4
 			if bet isnt 1
 				winAmount = bet*3.5
-			else winAmount = 25
+			else winAmount = 5
 		when 5
 			if bet isnt 1
 				winAmount = bet**5 
-			else winAmount = 50
+			else winAmount = 20
+
 		else winAmount = 0
 	winAmount
 
@@ -63,12 +64,12 @@ generaNumeri = ->
     numeri = []
     for i in [1 .. 20]
         numero = generaNumero()
-        numeri.push(numero)  
+        numeri.push(numero)
 
     if !preventDuplicate(numeri)
         bubbleSort(numeri)
     else generaNumeri()
-    
+
 numeri_lotto = generaNumeri()
 numeri_utente = userBet.split(',')
 indovinati = 0
