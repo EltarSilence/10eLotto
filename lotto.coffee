@@ -91,10 +91,11 @@ num_indovinati = []
 for num_utente in numeri_utente
     for num_lotto in numeri_lotto
         if Number(num_utente) is num_lotto
-        	indovinati++
-        	num_indovinati.push(num_utente)
+          indovinati++
+          num_indovinati.push(num_utente)
 
-alert "Hai indovinato " + indovinati + " numeri! Hai vinto " + calcolaVincita(soldi, indovinati) + " euro."
+vincita = calcolaVincita(soldi, indovinati)
+alert "Hai indovinato " + indovinati + " numeri! Hai vinto " + vincita + " euro."
 
 txtLotto = ""
 for num_lotto in numeri_lotto
@@ -102,9 +103,11 @@ for num_lotto in numeri_lotto
 
 txtUtente = ""
 for num_utente in numeri_utente
-	if contains(num_indovinati, num_utente)
-    	txtUtente += '<b>' + num_utente + "</b> || "
-    else txtUtente += num_utente + " || "
+  if contains(num_indovinati, num_utente)
+    txtUtente += '<b>' + num_utente + "</b> || "
+  else txtUtente += num_utente + " || "
 
+txtVincita = vincita + " euro"
 document.getElementById("generati").innerHTML = txtLotto
 document.getElementById("user").innerHTML = txtUtente
+document.getElementById("vincita").innerHTML = txtVincita
